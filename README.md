@@ -8,4 +8,4 @@
 
 It is required to load the Google Auth JSON with keys on an environment variable
 
-`export path path/to/file.json`
+`export GOOGLE_APPLICATION_CREDENTIALS=path/to/file.json`
