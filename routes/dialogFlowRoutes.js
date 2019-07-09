@@ -7,7 +7,7 @@ const sessionPath = sessionClient.sessionPath(confKeys.googleProjectID, confKeys
 module.exports = app => {
 
   // ROUTES
-  app.get("/api/df_text_query", async (req, res) => {
+  app.post("/api/df_text_query", async (req, res) => {
 
     const request = {
       session: sessionPath,
@@ -31,6 +31,7 @@ module.exports = app => {
 
     if (result.intent) {
       console.log(`  Intent: ${result.intent.displayName}`);
+      res.status(200).json({ response: responses[0].queryResult })
     } else {
       console.log(`  No intent matched.`);
     }
