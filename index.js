@@ -4,16 +4,11 @@ const app = express()
 
 const PORT = process.env.PORT || 6727
 
+// MOUNT ROUTES
+require("./routes/dialogFlowRoutes")(app)
+
 // MIDDLEWARE
 app.use(bodyParser.json())
 
-// ROUTES
-app.get("/api/df_text_query", (req, res) => {
-  console.log("test")
-})
-
-app.get("/api/df_event_query", (req, res) => {
-  console.log("test")
-})
-
+// START APP
 app.listen(PORT);
