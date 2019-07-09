@@ -6,6 +6,6 @@
 
 ## REQUIREMENT
 
-It is required to load the Google Auth JSON with keys on an environment variable
+It is required to load the Google Credentials JSON with auth keys on an environment variable
 
 `export GOOGLE_APPLICATION_CREDENTIALS=path/to/file.json`
