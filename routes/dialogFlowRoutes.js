@@ -35,9 +35,7 @@ module.exports = app => {
       } else {
         console.log(`  No intent matched.`);
       }
-    } catch (e) {
-      console.log(e)
-    }
+    } catch (e) { console.log(e) }
 
   })
 
