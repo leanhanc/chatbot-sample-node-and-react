@@ -1,5 +1,5 @@
 module.exports = {
-  googleProjectID: "chat-example-bot--dqgdlh",
+  googleProjectID: "chatbot-react-node-yqgpfe",
   dialogFlowSessionID: "chat-example-bot-session",
   dialogFlowSessionLanguageCode: "en-US",
 }
