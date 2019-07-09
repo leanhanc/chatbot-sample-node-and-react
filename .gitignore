@@ -86,3 +86,7 @@ typings/
 
 # DynamoDB Local files
 .dynamodb/
+
+###########################
+# Keys
+chatbot-react-node.json
