@@ -13,4 +13,4 @@ require("./routes/dialogFlowRoutes")(app)
 
 
 // START APP
-app.listen(PORT);
+app.listen(PORT)

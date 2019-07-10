@@ -1,3 +1,4 @@
+const structJson = require("structjson")
 const dialogFow = require("dialogflow")
 const confKeys = require("../config/keys")
 
@@ -22,18 +23,34 @@ async function textQuery(text, parameters = {}) {
     }
   }
 
-
-
   let responses = await sessionClient.detectIntent(request)
   responses = await handleResponses(responses)
   return responses
 
 }
 
+async function eventQuery(event, parameters = {}) {
+
+  const request = {
+    session: sessionPath,
+    queryInput: {
+      event: {
+        name: event,
+        parameters: structJson.jsonToStructProto(parameters),
+        languageCode: confKeys.dialogFlowSessionLanguageCode
+      }
+    },
+
+  }
+
+  let responses = await sessionClient.detectIntent(request)
+  responses = await handleResponses(responses)
+  return responses
+}
 
 async function handleResponses(responses) {
   console.log(responses)
   return responses
 }
 
-module.exports = { textQuery, handleResponses }
+module.exports = { eventQuery, textQuery }
