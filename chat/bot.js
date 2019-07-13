@@ -5,7 +5,7 @@ const confKeys = require("../config/keys")
 const projectId = confKeys.googleProjectID
 
 const credentials = {
-  client_email: confKeys.googleClient,
+  client_email: confKeys.googleClientEmail,
   private_key: confKeys.googlePrivateKey
 }
 
