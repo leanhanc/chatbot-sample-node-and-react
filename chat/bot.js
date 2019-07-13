@@ -2,7 +2,14 @@ const structJson = require("structjson")
 const dialogFow = require("dialogflow")
 const confKeys = require("../config/keys")
 
-const sessionClient = new dialogFow.SessionsClient()
+const projectId = confKeys.googleProjectID
+
+const credentials = {
+  client_email: confKeys.googleClient,
+  private_key: confKeys.googlePrivateKey
+}
+
+const sessionClient = new dialogFow.SessionsClient({ projectId, credentials })
 const sessionPath = sessionClient.sessionPath(confKeys.googleProjectID, confKeys.dialogFlowSessionID)
 
 
